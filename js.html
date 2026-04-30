@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Example</title>
+</head>
+<body>
+
+    <!-- Button -->
+    <button id="btn">Click</button>
+
+    <script>
+        // Select the button using its ID
+        let btn = document.getElementById("btn");
+
+        // Add click event listener
+        btn.addEventListener("click", () => {
+            alert("Button clicked!");
+        });
+    </script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>preventDefault Example</title>
+</head>
+<body>
+
+    <a href="https://google.com" id="link">Go to Google</a>
+
+    <script>
+        let link = document.getElementById("link");
+
+        link.addEventListener("click", (e) => {
+            e.preventDefault();  // stops link from opening
+            console.log("Link click prevented!");
+        });
+    </script>
+
+</body>
+</html>
