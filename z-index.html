@@ -1,0 +1,148 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Z-Index Internal CSS</title>
+
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      position: absolute; /* required for z-index */
+    }
+
+    .red {
+      background: red;
+      top: 50px;
+      left: 50px;
+      z-index: 1;
+    }
+
+    .blue {
+      background: blue;
+      top: 80px;
+      left: 80px;
+      z-index: 2;
+    }
+    .yellow{
+        background: yellow;
+      top: 110px;
+      left: 110px;
+      z-index:3;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="box red">Red</div>
+  <div class="box blue">Blue</div>
+  <div class="box yellow">Yellow</div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Position Demo</title>
+
+  <style>
+    body {
+      height: 2000px; /* to test scroll */
+      font-family: Arial;
+    }
+
+    .box {
+      width: 120px;
+      height: 120px;
+      color: white;
+      text-align: center;
+      line-height: 120px;
+      margin: 20px;
+    }
+
+    /* 1. Static */
+    .static {
+      background: red;
+      position: static;
+     
+    }
+
+    /* 2. Relative */
+    .relative {
+      background: blue;
+      position: relative;
+      top: 20px;
+      left: 40px;
+    }
+
+    /* Parent for absolute */
+    .parent {
+      width: 300px;
+      height: 300px;
+      background: lightgray;
+      position: relative;
+      margin: 20px;
+    }
+
+    /* 3. Absolute */
+    .absolute {
+      background: green;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    /* 4. Fixed */
+    .fixed {
+      background: black;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+
+    /* 5. Sticky */
+    .sticky {
+      background: orange;
+      position: sticky;
+      top: 0;
+    }
+
+    .content {
+      height: 800px;
+      background: #f2f2f2;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h2>CSS Position Demo</h2>
+
+  <!-- Static -->
+  <div class="box static">Static</div>
+  <!-- <div class="box static">Static</div> -->
+
+  <!-- Relative -->
+  <div class="box relative">Relative</div>
+
+  <!-- Absolute inside parent -->
+  <div class="parent">
+    Parent
+    <div class="box absolute">Absolute</div>
+  </div>
+
+  <!-- Fixed -->
+  <div class="box fixed">Fixed</div>
+
+  <!-- Sticky -->
+  <div class="box sticky">Sticky</div>
+
+  <div class="content">
+    Scroll down to see sticky & fixed behavior...
+  </div>
+
+</body>
+</html>
