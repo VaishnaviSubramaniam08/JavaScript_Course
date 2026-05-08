@@ -1,0 +1,110 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>display none Example</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      margin-top: 20px;
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>display: none Example</h1>
+
+  <button onclick="hideBox()">
+    Hide Box
+  </button>
+
+  <div class="box" id="myBox">
+    I am a box
+  </div>
+
+  <p>
+    This text will move up when box disappears.
+  </p>
+
+  <script>
+    function hideBox() {
+      document.getElementById("myBox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
+ -->
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>visibility vs display</title>
+
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      padding: 20px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .box1 {
+      background-color: red;
+    }
+
+    .box2 {
+      background-color: blue;
+      visibility: hidden;
+    }
+
+    .box3 {
+      background-color: green;
+    }
+
+    .box4 {
+      background-color: purple;
+      display: none;
+    }
+
+    .box5 {
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>visibility:hidden Example</h2>
+
+  <div class="box box1">Box 1</div>
+  <div class="box box2">Box 2</div>
+  <div class="box box3">Box 3</div>
+
+  <hr>
+
+  <h2>display:none Example</h2>
+
+  <div class="box box1">Box 1</div>
+  <div class="box box4">Box 4</div>
+  <div class="box box5">Box 5</div>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-//4 Basic types of Functions:
+//  4 Basic types of Functions:
 // Function declaration
 // Function Expression
 // Arrow Function
