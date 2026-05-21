@@ -77,3 +77,16 @@ let add =(a,b)=> a+b;
 (function(name){
     console.log("Hello "+name);
 })("Vaish");
+
+
+function orderFood(callback){
+    console.log("Preparing food");
+
+    callback();
+}
+
+function delivery(){
+    console.log("Food delivered");
+}
+
+orderFood(delivery);

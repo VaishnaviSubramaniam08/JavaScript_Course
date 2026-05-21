@@ -1,0 +1,13 @@
+let s="123";
+console.log(s);
+let n=Number(s);
+console.log(n);
+let number=123;
+let string=String(number);
+console.log(string);
+let bool=true;
+let k=Number(bool);
+console.log(k);
+let str=String(bool);
+console.log(str);
+console.error("Invalid password");

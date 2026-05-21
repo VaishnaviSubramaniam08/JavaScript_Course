@@ -1,0 +1,30 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline js</title>
+</head>
+<body>
+    <h2> Adding javascript in HTML document</h2>
+    <button onclick="alert('Button Clicked!')">Click here</button> 
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Internal javascript </title>
+    <script>
+            function myFun(){
+                document.getElementById("demo").innerHTML="Content changed";
+            }
+    </script>
+</head>
+<body>
+    <h2>Add javascript code inside head section</h2>
+    <h3 id="demo">VAISHNAVI</h3>
+    <button onclick="myFun()">Click here</button>
+</body>
+</html>
