@@ -47,8 +47,30 @@
     <head>
         <title> HTML TAGS</title>
     </head>
-    <body>
+    <!-- <body>
         <h1> <q>web developer</q></h1>
         <blockquote cite="https://en.wikipedia.org/wiki/Web_developer"> A web developer is a programmer who develops World Wide Web applications using a client–server model. The applications typically use HTML, CSS, and JavaScript in the client, and any general-purpose programming language in the server. HTTP is used for communications between client and server. </blockquote>
+    </body> -->
+
+    <body>
+        <div>
+       <button>Click</button>
+      </div>
+        <script>
+            const button = document.querySelector("button");
+
+document.querySelector("div").addEventListener(
+    "click",
+    () => {
+        console.log("Div clicked");
+    },
+    true
+);
+
+button.addEventListener("click", (e) => {
+    console.log("Button clicked");
+    e.stopPropagation();
+});
+        </script>
     </body>
 </html>

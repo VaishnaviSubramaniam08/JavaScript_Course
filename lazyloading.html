@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lazyloading</title>
+</head>
+<body>
+    <input type="text" id="search_input">
+    <script>
+        function loadScript(url){
+        let myScript=document.createElement('script');
+        myScript.src=url;
+        myScript.className='lazy';
+        document.body.appendChild(myScript);
+        console.log("loading the script");
+        }
+        var searchInput=document.getElementById('search_input');
+        searchInput.addEventListener('focus',function(e){
+            loadScript('https://code.jquery.com/jquery-3.6.1.min.js');
+        });
+    </script>
+</body>
+</html>
