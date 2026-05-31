@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,5 +20,78 @@
             loadScript('https://code.jquery.com/jquery-3.6.1.min.js');
         });
     </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading Example</title>
+
+    <style>
+        body{
+            font-family: Arial;
+        }
+        .box{
+            height: 700px;
+        }
+        img{
+            width: 400px;
+            height: 250px;
+            display: block;
+            margin: auto;
+            opacity: 0;
+            transition: 1s;
+        }
+        img.loaded{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 align="center">Lazy Loading Images</h1>
+
+    <div class="box"></div>
+
+    <img 
+        data-src="https://picsum.photos/400/250"
+        alt="Lazy Image"
+    >
+   
+
+    <script>
+
+        // Select image
+        const image = document.querySelector("img");
+
+        // Create observer
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                // Check image enters viewport
+                if(entry.isIntersecting){
+
+                    // Load actual image
+                    image.src = image.dataset.src;
+
+                    // Add fade effect
+                    image.classList.add("loaded");
+
+                    // Stop observing
+                    observer.unobserve(image);
+                }
+
+            });
+
+        });
+
+        // Observe image
+        observer.observe(image);
+
+    </script>
+
 </body>
 </html>
